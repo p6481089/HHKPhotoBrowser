@@ -1,0 +1,22 @@
+PODS:
+  - GPUImage (0.1.7)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+
+DEPENDENCIES:
+  - GPUImage
+  - SDWebImage (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GPUImage
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+
+PODFILE CHECKSUM: 7a491dc4971f29dc2485ccbf93cb7dc4b5fdac2b
+
+COCOAPODS: 1.5.3
