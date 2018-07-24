@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name        = 'HHKPhotoBrowser'
-s.version     = '1.0.9'
+s.version     = '1.0.10'
 s.authors     = { 'HHongKang' => '821705518@qq.com' }
 s.homepage    = 'https://github.com/p6481089/HHKPhotoBrowser'
 s.summary     = 'a dropdown menu for ios like wechat homepage.'
