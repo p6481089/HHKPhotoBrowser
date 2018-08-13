@@ -854,6 +854,8 @@ typedef NS_ENUM(NSUInteger, SlideSelectType) {
         camera.allowTakePhoto = configuration.allowSelectImage;
         camera.allowRecordVideo = configuration.allowSelectVideo && configuration.allowRecordVideo;
         camera.sessionPreset = configuration.sessionPreset;
+        camera.allowEditImage = configuration.allowEditImage;
+        camera.allowEditVideo = configuration.allowEditVideo;
         camera.videoType = configuration.exportVideoType;
         camera.circleProgressColor = configuration.bottomBtnsNormalTitleColor;
         camera.maxRecordDuration = configuration.maxRecordDuration;

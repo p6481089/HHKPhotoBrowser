@@ -75,6 +75,8 @@
 
 @property (nonatomic, assign) BOOL allowTakePhoto;
 @property (nonatomic, assign) BOOL allowRecordVideo;
+@property (nonatomic, assign) BOOL allowEditImage;
+@property (nonatomic, assign) BOOL allowEditVideo;
 @property (nonatomic, strong) UIColor *circleProgressColor;
 @property (nonatomic, assign) NSInteger maxRecordDuration;
 
@@ -165,6 +167,8 @@
     }
 }
 
+
+
 - (void)setAllowRecordVideo:(BOOL)allowRecordVideo
 {
     _allowRecordVideo = allowRecordVideo;
@@ -175,6 +179,15 @@
         [self.bottomView addGestureRecognizer:longG];
     }
 }
+
+-(void)setAllowEditImage:(BOOL)allowEditImage{
+    _allowEditImage = allowEditImage;
+}
+-(void)setAllowEditVideo:(BOOL)allowEditVideo{
+    _allowEditVideo = allowEditVideo;
+}
+
+
 
 - (void)setupUI
 {
@@ -316,7 +329,13 @@
 {
     self.cancelBtn.hidden = NO;
     self.doneBtn.hidden = NO;
-    self.editBtn.hidden = NO;
+//    NSLog(@"%ld--%ld",self.allowEditImage,_allowEditImage);
+    if (_allowEditImage) {
+        self.editBtn.hidden = NO;
+    }else{
+        self.editBtn.hidden = true;
+    }
+    
     CGRect cancelRect = self.cancelBtn.frame;
     cancelRect.origin.x = 40;
     
@@ -557,6 +576,8 @@
     self.toolView.delegate = self;
     self.toolView.allowTakePhoto = self.allowTakePhoto;
     self.toolView.allowRecordVideo = self.allowRecordVideo;
+    self.toolView.allowEditImage = self.allowEditImage;
+    self.toolView.allowEditVideo = self.allowEditVideo;
     self.toolView.circleProgressColor = self.circleProgressColor;
     self.toolView.maxRecordDuration = self.maxRecordDuration;
     [self.view addSubview:self.toolView];
